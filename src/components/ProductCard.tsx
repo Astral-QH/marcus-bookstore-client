@@ -21,6 +21,7 @@ export default function ProductCard({ product }: Props) {
         <img
           src={product.image}
           alt={product.name}
+          loading="lazy"
         />
 
       </div>

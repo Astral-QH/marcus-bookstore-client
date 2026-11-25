@@ -1,3 +1,4 @@
+
 export type Product = {
   id: number;
   name: string;
@@ -12,7 +13,7 @@ export const products: Product[] = [
     id: 1,
     name: "Đắc Nhân Tâm",
     price: 86000,
-    image: "https://placehold.co/400x500?text=Dac+Nhan+Tam",
+    image: "/images/books/dac-nhan-tam.jpg",
     category: "Kỹ năng sống",
     stock: 12,
   },
@@ -20,7 +21,7 @@ export const products: Product[] = [
     id: 2,
     name: "Nhà Giả Kim",
     price: 79000,
-    image: "https://placehold.co/400x500?text=Nha+Gia+Kim",
+    image: "/images/books/nha-gia-kim.jpg",
     category: "Văn học",
     stock: 8,
   },
@@ -28,7 +29,7 @@ export const products: Product[] = [
     id: 3,
     name: "Atomic Habits",
     price: 120000,
-    image: "https://placehold.co/400x500?text=Atomic+Habits",
+    image: "/images/books/atomic-habits.jpg",
     category: "Phát triển bản thân",
     stock: 0,
   },
@@ -36,7 +37,7 @@ export const products: Product[] = [
     id: 4,
     name: "Tâm Lý Học Về Tiền",
     price: 110000,
-    image: "https://placehold.co/400x500?text=Psychology+of+Money",
+    image: "/images/books/tam-ly-hoc-ve-tien.jpg",
     category: "Kinh doanh",
     stock: 15,
   },
@@ -44,7 +45,7 @@ export const products: Product[] = [
     id: 5,
     name: "Tuổi Trẻ Đáng Giá Bao Nhiêu",
     price: 90000,
-    image: "https://placehold.co/400x500?text=Tuoi+Tre",
+    image: "/images/books/tuoi-tre-dang-gia-bao-nhieu.jpg",
     category: "Kỹ năng sống",
     stock: 10,
   },
@@ -52,7 +53,7 @@ export const products: Product[] = [
     id: 6,
     name: "Deep Work",
     price: 135000,
-    image: "https://placehold.co/400x500?text=Deep+Work",
+    image: "/images/books/deep-work.jpg",
     category: "Phát triển bản thân",
     stock: 6,
   },
