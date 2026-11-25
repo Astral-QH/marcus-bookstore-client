@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import Banner from "./components/Banner";
 import ProductList from "./components/ProductList";
 import Footer from "./components/Footer";
 
@@ -12,7 +13,8 @@ function App() {
       <Header />
 
       <main>
-        <ProductList title="Sách nổi bật" items={products} />
+        <Banner />
+        <ProductList title="Sản phẩm nổi bật" items={products} />
       </main>
 
       <Footer />
