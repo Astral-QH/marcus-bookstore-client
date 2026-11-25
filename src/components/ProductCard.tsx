@@ -1,3 +1,4 @@
+
 import type { Product } from "../data/products";
 
 type Props = {
@@ -7,10 +8,29 @@ type Props = {
 export default function ProductCard({ product }: Props) {
   return (
     <div className="product-card">
-      <img src={product.image} alt={product.name} />
 
+      {/* Khu vực ảnh bìa sách */}
+      <div className="product-image">
+
+        {product.stock === 0 && (
+          <span className="out-of-stock">
+            Hết hàng
+          </span>
+        )}
+
+        <img
+          src={product.image}
+          alt={product.name}
+        />
+
+      </div>
+
+      {/* Thông tin sách */}
       <div className="product-body">
-        <span className="product-category">{product.category}</span>
+
+        <span className="product-category">
+          {product.category}
+        </span>
 
         <h3>{product.name}</h3>
 
@@ -18,7 +38,13 @@ export default function ProductCard({ product }: Props) {
           {product.price.toLocaleString("vi-VN")} đ
         </p>
 
-        <button className="btn">Thêm vào giỏ</button>
+        <button
+          className="btn"
+          disabled={product.stock === 0}
+        >
+          Thêm vào giỏ
+        </button>
+
       </div>
     </div>
   );
