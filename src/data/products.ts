@@ -23,7 +23,7 @@ export const products: Product[] = [
     price: 79000,
     image: "/images/books/nha-gia-kim.jpg",
     category: "Văn học",
-    stock: 8,
+    stock: 3,
   },
   {
     id: 3,
@@ -55,6 +55,6 @@ export const products: Product[] = [
     price: 135000,
     image: "/images/books/deep-work.jpg",
     category: "Phát triển bản thân",
-    stock: 6,
+    stock: 5,
   },
 ];

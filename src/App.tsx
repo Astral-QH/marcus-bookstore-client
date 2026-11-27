@@ -1,3 +1,4 @@
+
 import Header from "./components/Header";
 import Banner from "./components/Banner";
 import CategoryList from "./components/CategoryList";
@@ -5,13 +6,16 @@ import ProductList from "./components/ProductList";
 import Footer from "./components/Footer";
 
 import { products } from "./data/products";
-import { filterProducts } from "./utils/product";
+import {
+  filterProducts,
+  getCategories,
+} from "./utils/product";
 
 import "./App.css";
 
 function App() {
   // Lấy danh sách thể loại sách
-  const categories = [...new Set(products.map((p) => p.category))];
+  const categories = getCategories(products);
 
   // Lọc sách theo giá và sắp xếp tăng dần
   const cheapProducts = filterProducts(products, {
@@ -23,6 +27,11 @@ function App() {
   const lifeSkillsBooks = filterProducts(products, {
     category: "Kỹ năng sống",
   });
+
+  // Bài 3: Lọc sách sắp hết hàng
+  const lowStockProducts = products.filter(
+    (p) => p.stock >= 1 && p.stock <= 5,
+  );
 
   return (
     <>
@@ -51,6 +60,12 @@ function App() {
         <ProductList
           title="Sách kỹ năng sống"
           items={lifeSkillsBooks}
+        />
+
+        {/* Sách sắp hết hàng */}
+        <ProductList
+          title="Sách sắp hết hàng"
+          items={lowStockProducts}
         />
       </main>
 
